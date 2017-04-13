@@ -1,9 +1,15 @@
  window.onload = function(){
 	if(isbinded && isgiven) { 
 		$('.success').css('display','block');
+		setTimeout(function() {
+			$('.success').css('margin-top','2.96rem');
+		},0)
 	} else {
 		console.log(1)
 		$('.coupon').css('display','block');
+		setTimeout(function() {
+			$('.coupon').css('margin-top','0.66666667rem');
+		},0)
 	}
 		
 	
@@ -19,12 +25,11 @@
 	        function(data) {
 	            data = JSON.parse(data);
 	            console.log(data);
-	            $('.message').css("display","block");
-	            setTimeout(function() {
-	            	$('.message').css("display","none");
-	            },1500)
-	            message($('.tips'), data.status_code);
-
+	            $('.message').fadeIn(500);
+            	message($('.tips'), data.status_code);
+				setTimeout(function () {
+					$('.message').fadeOut(500);
+				}, 1500);
 	        }
 	    );
 	});
@@ -40,7 +45,10 @@
 	            console.log(res);
 	            if (res.status_code === 200) {
 	            	$('.container').css('display','none');
-	                $('.coupon').css('display','block');
+					$('.coupon').css('display','block');
+					setTimeout(function() {
+						$('.coupon').css('margin-top','0.66666667rem');
+					},0)
 	            }else{
 					$('.message').fadeIn(500);
 					bindmsg($('.tips'), res.status_code);
@@ -53,14 +61,26 @@
 	});
 	$('.get').on('click', function() {
 		if (!isbinded && !isgiven) {
+			
+			$('.coupon').css('margin-top','10.66666667rem');
+			
+			// setTimeout(function() {
+				$('.coupon').css('display','none');
+			// },0)
+			
 			$('.container').css('display','block');
-			$('.envelope-top').css('top','0');
+			setTimeout(function() {
+				$('.envelope-top').css('top','0');
+			},0)
+			setTimeout(function() {
+				$('.envelope-bottom').css('top','0.21333333rem');
+			},0)
 			setTimeout(function() {
 				$('.sign-in').css('margin-top','0.82666667rem');
 			},0);
 			setTimeout(function() {
 				$('.paper').css('top','0');
-			},100);
+			},300);
 		} else {
 			$.post("http://nbvcv.com/app/index.php?i=2&c=entry&do=TakeTicket&m=apus_coupon",
 				{
@@ -72,7 +92,13 @@
 
 					}
 					$('.coupon').css('display','none');
-					$('.success').css('display','display');
+					// setTimeout(function() {
+					// 	$('.coupon').css('margin-top','-10.66666667rem');
+					// },0)
+					$('.success').css('display','block');
+					setTimeout(function() {
+						$('.success').css('margin-top','2.96rem');
+					},0)
 				}
 			);
 		}
