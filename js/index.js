@@ -1,18 +1,12 @@
  window.onload = function(){
 	if(isbinded && isgiven) { 
 		$('.success').css('display','block');
-	} else if(isbinded || isgiven) {
+	} else {
 		console.log(1)
 		$('.coupon').css('display','block');
-	} else if(!isbinded && !isgiven) {
-		$('.container').css('display','block');
-		$('.envelope-top').css('top','0');
-		setTimeout(function() {
-			$('.paper').css('top','0');
-		},100);
-		$('.sign-in').css('margin-top','0.82666667rem');
-		$('.paper').css('margin-top','0');
 	}
+		
+	
 
 
 
@@ -58,19 +52,30 @@
 	    );
 	});
 	$('.get').on('click', function() {
-		$.post("http://nbvcv.com/app/index.php?i=2&c=entry&do=TakeTicket&m=apus_coupon",
-			{
-				openid: open_id
-				// phone_num: 15310260491
-			},
-			function(data) {
-				if(!staffid) {
-					
+		if (!isbinded && !isgiven) {
+			$('.container').css('display','block');
+			$('.envelope-top').css('top','0');
+			setTimeout(function() {
+				$('.sign-in').css('margin-top','0.82666667rem');
+			},0);
+			setTimeout(function() {
+				$('.paper').css('top','0');
+			},100);
+		} else {
+			$.post("http://nbvcv.com/app/index.php?i=2&c=entry&do=TakeTicket&m=apus_coupon",
+				{
+					openid: open_id
+					// phone_num: 15310260491
+				},
+				function(data) {
+					if(!staffid) {
+
+					}
+					$('.coupon').css('display','none');
+					$('.success').css('display','display');
 				}
-				$('.coupon').css('display','none');
-				$('.success').css('display','display');
-			}
-		);
+			);
+		}
 	})
 	function message(elem, code) {
 	    switch (code) {
