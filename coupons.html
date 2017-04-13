@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="js/flexible.js"></script>
     <title>2000元现金券钜惠大放送</title>
     <link rel="stylesheet" href="css/coupons.css">
+    <script src="js/flexible.js"></script>
+    <script src="./js/jquery-1.9.1.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script type="text/javascript">
+        var open_id = "{$openid}";
+        var isbinded = "{$bindPhone}";
+        var isgiven = 0;
+    </script>
 </head>
 <body>
     <div class="container">
@@ -20,10 +27,10 @@
             </div>
         </div>
         <div class="sign-in">
-            <input type="text" class="name" placeholder="姓名">
+            <input type="tel" class="name" placeholder="手机号">
             <div class="obtain">获取验证码</div>
             <div class="line"></div>            
-            <input type="tel" class="phone" placeholder="手机号">
+            <input type="text" class="phone" placeholder="验证码">
         </div>
         <div class="next">
             下一步
