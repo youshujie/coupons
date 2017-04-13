@@ -1,16 +1,15 @@
  window.onload = function(){
-	var isbinded = false;
-	
 	if(isbinded && isgiven) { 
 		$('.success').css('display','block');
 	} else if(isbinded || isgiven) {
+		console.log(1)
 		$('.coupon').css('display','block');
 	} else if(!isbinded && !isgiven) {
 		$('.container').css('display','block');
 		$('.envelope-top').css('top','0');
 		setTimeout(function() {
 			$('.paper').css('top','0');
-		},1000);
+		},100);
 		$('.sign-in').css('margin-top','0.82666667rem');
 		$('.paper').css('margin-top','0');
 	}
@@ -27,6 +26,9 @@
 	            data = JSON.parse(data);
 	            console.log(data);
 	            $('.message').css("display","block");
+	            setTimeout(function() {
+	            	$('.message').css("display","none");
+	            },1500)
 	            message($('.tips'), data.status_code);
 
 	        }
@@ -43,8 +45,8 @@
 	            res = JSON.parse(res);
 	            console.log(res);
 	            if (res.status_code === 200) {
-	                $('.success').css('display','block');
-					
+	            	$('.container').css('display','none');
+	                $('.coupon').css('display','block');
 	            }else{
 					$('.message').fadeIn(500);
 					bindmsg($('.tips'), res.status_code);
@@ -55,6 +57,18 @@
 	        }
 	    );
 	});
+	$('.get').on('click', function() {
+		$.post("http://nbvcv.com/app/index.php?i=2&c=entry&do=TakeTicket&m=apus_coupon",
+			{
+				openid: open_id
+				// phone_num: 15310260491
+			},
+			function(data) {
+				$('.coupon').css('display','none');
+				$('.success').css('display','display');
+			}
+		);
+	})
 	function message(elem, code) {
 	    switch (code) {
 	        case 1:

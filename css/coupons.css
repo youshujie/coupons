@@ -26,7 +26,7 @@ input {
   color: #fff;
 }
 .container {
-  display: block;
+  display: none;
   width: 10rem;
   height: 100%;
 }
