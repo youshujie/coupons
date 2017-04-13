@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-size: "Microsoft YaHei", sans-serif;
+    font-family: "Microsoft YaHei", sans-serif;
     background: url(../imgs/bg.png) no-repeat;
     background-size: 100% 100%;
     overflow: hidden;
@@ -32,14 +32,14 @@ input {
     height: 100%;
 }
 .envelope {
-    position: relative;
     width: 10rem;
     height: 454/75rem;
     background: url(../imgs/envelope_bg.png) no-repeat;
     background-size: 100% 100%;
     .envelope-top {
         position: absolute;
-        top: 0;
+        top: -10rem;
+        -webkit-transition:all 1s ease-in-out;
         left: 50/75rem;
         width: 650/75rem;
         height: 140/75rem;
@@ -51,7 +51,8 @@ input {
     }
     .paper {
         position: absolute;
-        top: 0;
+        -webkit-transition:all 1s ease-in-out;        
+        top: -10rem;
         left: 72/75rem;
         width: 606/75rem;
         height: 400/75rem;
@@ -76,8 +77,9 @@ input {
 
 }
 .sign-in {
-    margin-top: 62/75rem;
+    -webkit-transition:all 1s ease-in-out;
     margin: 0 auto;
+    margin-top: 812/75rem;
     width: 600/75rem;
     height: 298/75rem;
     border: 3/75rem solid #bf9d5e;
@@ -111,7 +113,7 @@ input {
         float: left;
         margin-left: 23/75rem;
         width: 554/75rem;
-        height: 1/75rem;
+        height: 2/75rem;
         background: url(../imgs/line.png) no-repeat;
         background-size: 100% 100%;
     }

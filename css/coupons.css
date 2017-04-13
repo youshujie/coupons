@@ -39,7 +39,7 @@ input {
 .envelope .envelope-top {
   position: absolute;
   top: -10rem;
-  -webkit-transition: top 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
   left: 0.66666667rem;
   width: 8.66666667rem;
   height: 1.86666667rem;
@@ -75,7 +75,7 @@ input {
   height: 3.02666667rem;
 }
 .sign-in {
-  -webkit-transition:all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
   margin: 0 auto;
   margin-top: 10.82666667rem;
   width: 8rem;
@@ -112,7 +112,7 @@ input {
   float: left;
   margin-left: 0.30666667rem;
   width: 7.38666667rem;
-  height: 0.01333333rem;
+  height: 0.02666667rem;
   background: url(../imgs/line.png) no-repeat;
   background-size: 100% 100%;
 }
@@ -177,36 +177,4 @@ input {
 .success img {
   width: 8.08rem;
   height: 7.82666667rem;
-}
-
-
-.message,.message span {
-  position:absolute;
-  top:0;
-  left:0;
-  text-align:center;
-  color:#fff;
-  outline:0
-}
-.message {
-  display: none;
-  opacity: 0.5;
-  -webkit-transition: all 1s ease-in-out;
-  width:100%;
-  height:100%;
-  background-color:#fcc;
-  z-index:10;
-  
-}
-.message span {
-  display:block;
-  margin:auto 1rem;
-  bottom:0;
-  right:0;
-  width:auto;
-  height:1.33333333rem;
-  line-height:1.33333333rem;
-  background-color:#000;
-  font-size:.42666667rem;
-  border-radius:.26666667rem
 }
