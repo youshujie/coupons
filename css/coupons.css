@@ -8,6 +8,7 @@ body {
   font-size: "Microsoft YaHei", sans-serif;
   background: url(../imgs/bg.png) no-repeat;
   background-size: 100% 100%;
+  overflow: hidden;
 }
 input {
   margin: 0;
@@ -25,7 +26,7 @@ input {
   color: #fff;
 }
 .container {
-  display: none;
+  display: block;
   width: 10rem;
   height: 100%;
 }
@@ -132,4 +133,46 @@ input {
 .shadow img {
   width: 8.08rem;
   height: 1.6rem;
+}
+.coupon {
+  display: none;
+  margin: 0 auto;
+  margin-top: 0.66666667rem;
+  width: 9.10666667rem;
+  height: 15.12rem;
+}
+.coupon .coupon-box {
+  position: relative;
+  width: 9.10666667rem;
+  height: 15.12rem;
+  z-index: 1;
+}
+.coupon .coupon-box img {
+  width: 9.10666667rem;
+  height: 15.12rem;
+}
+.coupon .get {
+  position: relative;
+  margin: 0 auto;
+  margin-top: -1.81333333rem;
+  width: 7.76rem;
+  height: 1.10666667rem;
+  border: 2px solid #ffe291;
+  line-height: 1.10666667rem;
+  background-color: #bf9d5e;
+  font-size: 0.42666667rem;
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+}
+.success {
+  display: none;
+  margin: 0 auto;
+  margin-top: 2.96rem;
+  width: 8.08rem;
+  height: 7.82666667rem;
+}
+.success img {
+  width: 8.08rem;
+  height: 7.82666667rem;
 }
