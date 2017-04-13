@@ -64,6 +64,9 @@
 				// phone_num: 15310260491
 			},
 			function(data) {
+				if(!staffid) {
+					
+				}
 				$('.coupon').css('display','none');
 				$('.success').css('display','display');
 			}
