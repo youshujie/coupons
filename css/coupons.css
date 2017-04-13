@@ -1,0 +1,134 @@
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: "Microsoft YaHei", sans-serif;
+}
+input {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+}
+::-moz-placeholder {
+  color: #fff;
+}
+::-webkit-input-placeholder {
+  color: #fff;
+}
+:-ms-input-placeholder {
+  color: #fff;
+}
+.container {
+  width: 10rem;
+  height: 100%;
+  background: url(../imgs/bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+.envelope {
+  position: relative;
+  width: 10rem;
+  height: 6.05333333rem;
+  background: url(../imgs/envelope_bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+.envelope .envelope-top {
+  position: absolute;
+  top: 0;
+  left: 0.66666667rem;
+  width: 8.66666667rem;
+  height: 1.86666667rem;
+  z-index: 3;
+}
+.envelope .envelope-top img {
+  width: 8.66666667rem;
+  height: 1.86666667rem;
+}
+.envelope .paper {
+  position: absolute;
+  top: 0;
+  left: 0.96rem;
+  width: 8.08rem;
+  height: 5.33333333rem;
+  z-index: 2;
+}
+.envelope .paper img {
+  width: 8.08rem;
+  height: 5.33333333rem;
+}
+.envelope .envelope-bottom {
+  position: absolute;
+  top: 0.21333333rem;
+  left: 0.66666667rem;
+  width: 8.66666667rem;
+  height: 3.02666667rem;
+  z-index: 1;
+}
+.envelope .envelope-bottom img {
+  width: 8.66666667rem;
+  height: 3.02666667rem;
+}
+.sign-in {
+  margin-top: 0.82666667rem;
+  margin: 0 auto;
+  width: 8rem;
+  height: 3.97333333rem;
+  border: 0.04rem solid #bf9d5e;
+  background: #626f76;
+  opacity: 0.7;
+}
+.sign-in input {
+  display: block;
+  margin-left: 0.62666667rem;
+  height: 1.97333333rem;
+  line-height: 1.98666667rem;
+  font-size: 0.48rem;
+  background: transparent;
+  color: #fff;
+}
+.sign-in .name {
+  float: left;
+  width: 4.76rem;
+}
+.sign-in .obtain {
+  float: right;
+  margin: 0.58666667rem 0.62666667rem 0 0;
+  width: 1.90666667rem;
+  height: 0.69333333rem;
+  line-height: 0.69333333rem;
+  border: 0.04rem solid #d4ab37;
+  color: #cbae5a;
+  text-align: center;
+  font-size: 0.26666667rem;
+}
+.sign-in .line {
+  float: left;
+  margin-left: 0.30666667rem;
+  width: 7.38666667rem;
+  height: 0.01333333rem;
+  background: url(../imgs/line.png) no-repeat;
+  background-size: 100% 100%;
+}
+.next {
+  margin: 0 auto;
+  margin-top: 1.48rem;
+  width: 8.08rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.53333333rem;
+  background-color: #c7a464;
+}
+.shadow {
+  margin: 0 auto;
+  width: 8.08rem;
+  height: 1.6rem;
+}
+.shadow img {
+  width: 8.08rem;
+  height: 1.6rem;
+}
